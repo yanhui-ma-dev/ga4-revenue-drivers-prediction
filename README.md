@@ -122,11 +122,9 @@ Standardised coefficient:
 
 β = **12.27**
 
-Implication
-
 Users who initiate checkout are significantly more likely to generate higher revenue.
 
-This suggests that **optimising the checkout experience could have a meaningful impact on revenue performance.**
+Strategic Action: **Optimising the checkout experience could have a meaningful impact on revenue performance.**
 
 ---
 
@@ -140,9 +138,7 @@ Possible interpretation:
 
 Promotion interactions may attract **lower-intent users** or interrupt the purchase journey.
 
-Implication
-
-Promotional strategies may require **careful experimentation (e.g., A/B testing)** to ensure they improve conversion quality.
+Strategic Action: Promotional strategies may require **careful experimentation (e.g., A/B testing)** to ensure they improve conversion quality.
 
 ---
 
