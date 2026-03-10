@@ -1,4 +1,10 @@
 # GA4 Ecommerce Revenue Drivers Analysis
+[![SQL](https://img.shields.io/badge/SQL-Standard-blue?logo=postgresql&logoColor=white)](https://en.wikipedia.org/wiki/SQL)
+[![BigQuery](https://img.shields.io/badge/BigQuery-GCP-red?logo=google-bigquery&logoColor=white)](https://cloud.google.com/bigquery)
+[![Python](https://img.shields.io/badge/Python-Pandas-green?logo=python&logoColor=white)](https://pandas.pydata.org/)
+[![ML](https://img.shields.io/badge/ML-Regression-blueviolet)]()
+[![ETL](https://img.shields.io/badge/ETL-Pipeline-orange?logo=google-cloud&logoColor=white)](https://en.wikipedia.org/wiki/Extract,_transform,_load)
+[![Ecommerce](https://img.shields.io/badge/Ecommerce-Analytics-yellow?logo=google-analytics&logoColor=black)](https://marketingplatform.google.com/about/analytics/)
 
 ## Project Overview
 
@@ -189,3 +195,30 @@ Example output:
 ---
 
 ## Repository Structure
+project/
+│
+├── data/
+│
+├── notebooks/
+│   revenue_drivers_analysis.ipynb
+│
+├── sql/
+│   ga4_data_extraction.sql
+│
+├── figures/
+│   Feature_Importance_Revenue_Drivers.png
+│
+└── README.md
+
+---
+
+## Future Improvements
+
+Potential extensions to this project include:
+
+- Testing non-linear models (Random Forest, MLP, XGBoost)
+- Building a user engagement prediction model
+- Customer segmentation using behavioural features
+- Revenue uplift experimentation simulations
+
+---
