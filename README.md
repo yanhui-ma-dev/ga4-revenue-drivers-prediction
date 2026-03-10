@@ -106,7 +106,7 @@ User-level total revenue
 
 Evaluation Metric
 
-R² = **0.253**
+R² = **0.253** focusing on interpretability over hyperparameter tuning.
 
 The model explains approximately **25% of the variance in revenue**, indicating that behavioural funnel interactions have measurable predictive power.
 
@@ -146,7 +146,31 @@ Promotional strategies may require **careful experimentation (e.g., A/B testing)
 
 ---
 
-### 3. Behaviour Outweighs Acquisition
+### 3. Mobile-First Revenue Potential
+
+In the specific behavioral context of this dataset, Mobile devices show a slightly higher positive correlation with revenue compared to Desktop or Tablet.
+
+Standardised Coefficient: device_category_mobile > device_category_desktop
+
+Implication: Even if conversion rates are traditionally higher on desktop, the sheer volume or intent of mobile users in this segment drives higher total revenue.
+
+Strategic Action: Prioritising Mobile UX/UI and streamlining the mobile checkout flow is essential to capturing the bulk of the revenue potential.
+
+---
+
+### 4. The Paid Traffic vs. Promotion Paradox
+
+A fascinating contrast emerged between Paid Search (CPC) and On-site Promotions.
+
+Contrast: While medium_cpc shows a positive association with revenue, promo_clicks remains negative.
+
+Interpretation: Paid traffic (CPC) effectively brings in high-intent shoppers who know what they want. However, once on-site, generic or intrusive promotional banners may be distracting these high-intent users or interrupting a smooth conversion path.
+
+Strategic Action: Re-evaluate the "Promotion UX." Ensure that ads for paid traffic lead to focused landing pages rather than generic homepages with heavy promotional pop-ups.
+
+---
+
+### 5. Behaviour Outweighs Acquisition
 
 Traffic source and device category have relatively small effects compared with behavioural funnel signals.
 
