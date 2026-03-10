@@ -134,9 +134,7 @@ Promotion clicks show a **negative association with revenue**.
 
 β = **-0.59**
 
-Possible interpretation:
-
-Promotion interactions may attract **lower-intent users** or interrupt the purchase journey.
+Possible interpretation: Promotion interactions may attract **lower-intent users** or interrupt the purchase journey.
 
 Strategic Action: Promotional strategies may require **careful experimentation (e.g., A/B testing)** to ensure they improve conversion quality.
 
