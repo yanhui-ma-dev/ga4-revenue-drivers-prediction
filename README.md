@@ -93,7 +93,6 @@ Tools used:
 - pandas
 - scikit-learn
 - matplotlib
-- seaborn
 
 ---
 
@@ -190,25 +189,6 @@ Example output:
 - pandas
 - scikit-learn
 - matplotlib
-- seaborn
-
----
-
-## Repository Structure
-project/
-│
-├── data/
-│
-├── notebooks/
-│   revenue_drivers_analysis.ipynb
-│
-├── sql/
-│   ga4_data_extraction.sql
-│
-├── figures/
-│   Feature_Importance_Revenue_Drivers.png
-│
-└── README.md
 
 ---
 
