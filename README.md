@@ -1,94 +1,189 @@
-Revenue Driver Analysis Using GA4 Data
+# GA4 Ecommerce Revenue Drivers Analysis
 
-Project Overview
+## Project Overview
 
-This project investigates the behavioural drivers of ecommerce revenue using the Google Analytics 4 public dataset.
+This project explores which user behaviours are most strongly associated with ecommerce revenue using the **GA4 Obfuscated Sample Ecommerce Dataset**.
 
-The goal is to understand which user behaviours and traffic characteristics most strongly influence total revenue.
+The dataset is provided by Google and **emulates a web ecommerce implementation**, replicating the event structure typically captured in real-world Google Analytics 4 tracking.
 
-The analysis combines SQL-based feature engineering with regression modelling.
+The goal of this project is to identify behavioural signals that are most predictive of revenue using regression modelling.
 
+---
 
-Dataset
+## Dataset
 
-Source
+Dataset Source  
+GA4 Obfuscated Sample Ecommerce Dataset
 
-GA4 Obfuscated Sample Dataset
+Platform  
+Google BigQuery
 
-Table
-bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*
+Description  
+This public dataset provided by Google simulates a real ecommerce website and contains event-level user interaction data typically collected via Google Analytics 4.
 
-Key characteristics
-	•	Data Scale: ~30k rows per event table (Physical: 1.31 MB | Logical: 22.84 MB)
-	•	Nested GA4 schema
-	•	Ecommerce interaction events
+Dataset Scale
 
-Data processing was performed in Google BigQuery.
+- ~2.4M event records analysed
+- ~30k aggregated user-level observations
+- Behavioural features engineered from event interactions
 
-Feature Engineering
+---
 
-Behavioural features were aggregated at the user level:
-product_views
-cart_additions
-checkout_starts
-promo_clicks
+## Project Workflow
 
-Categorical variables included:
-traffic_source.medium
-device.category
+### 1. Data Extraction
 
-These were converted into machine-learning features using One-Hot Encoding.
+Data was queried from the GA4 public dataset using SQL in BigQuery.
 
-Machine Learning Model
+Key steps included:
 
-A linear regression model was trained using Python.
+- Filtering relevant event types
+- Aggregating event data to the user level
+- Creating behavioural features representing ecommerce funnel activity
 
-Libraries used:
-	•	pandas
-	•	scikit-learn
-	•	matplotlib
+Example behavioural signals:
 
-Feature scaling was applied using StandardScaler.
+- Product views
+- Add-to-cart events
+- Checkout initiation
+- Promotion clicks
+- Page views
+- Device category
+- Traffic source
 
-Model performance:
-R² = 0.253
+---
 
-Results
+### 2. Feature Engineering
 
-Feature Importance
+Event-level data was transformed into **user-level behavioural features**.
 
-The regression coefficients reveal the behavioural factors most strongly associated with revenue.
-images
+Feature examples:
 
-Key Findings
+| Feature | Description |
+|------|------|
+| page_views | Number of pages viewed |
+| product_views | Number of product detail views |
+| add_to_cart | Add-to-cart interactions |
+| begin_checkout | Checkout initiation events |
+| promotion_click | Promotion interaction events |
+| device_category | Device type (encoded) |
+| traffic_source | Acquisition channel (encoded) |
 
-1 Checkout behaviour drives revenue
+Categorical variables were encoded using **One-Hot Encoding**.
 
-Checkout initiation shows the strongest relationship with revenue.
+---
 
-Users reaching the checkout stage are significantly more likely to generate revenue.
+### 3. Data Processing
 
-⸻
+The modelling pipeline included:
 
-2 Promotion clicks show negative association
+- Train-test split
+- Feature scaling using **StandardScaler**
+- Linear regression modelling
 
-Promotion clicks correlate negatively with revenue.
+Tools used:
 
-This may indicate that certain promotions attract low-intent users.
+- Python
+- pandas
+- scikit-learn
+- matplotlib
+- seaborn
 
-⸻
+---
 
-3 Behaviour outweighs acquisition
+## Model
 
-User engagement within the shopping journey explains more revenue variation than traffic source or device type.
+Model Type  
+Linear Regression
 
-Tech Stack
+Target Variable  
+User-level total revenue
 
-SQL(Google BigQuery)
+Evaluation Metric
 
-Python
+R² = **0.253**
 
-Libraries
-	•	pandas
-	•	matplotlib
-	•	scikit-learn
+The model explains approximately **25% of the variance in revenue**, indicating that behavioural funnel interactions have measurable predictive power.
+
+---
+
+## Key Insights
+
+### 1. Checkout Behaviour is the Strongest Revenue Signal
+
+Checkout initiation shows the strongest association with revenue.
+
+Standardised coefficient:
+
+β = **12.27**
+
+Implication
+
+Users who initiate checkout are significantly more likely to generate higher revenue.
+
+This suggests that **optimising the checkout experience could have a meaningful impact on revenue performance.**
+
+---
+
+### 2. The "Promotion Paradox"
+
+Promotion clicks show a **negative association with revenue**.
+
+β = **-0.59**
+
+Possible interpretation:
+
+Promotion interactions may attract **lower-intent users** or interrupt the purchase journey.
+
+Implication
+
+Promotional strategies may require **careful experimentation (e.g., A/B testing)** to ensure they improve conversion quality.
+
+---
+
+### 3. Behaviour Outweighs Acquisition
+
+Traffic source and device category have relatively small effects compared with behavioural funnel signals.
+
+Implication
+
+**What users do on the site appears to matter more than how they arrive.**
+
+---
+
+## Key Takeaway
+
+Revenue variation appears to be more strongly associated with **user behaviour within the shopping funnel** than with **traffic acquisition characteristics**.
+
+In practical terms:
+
+Acquisition brings users.  
+Behaviour converts them.
+
+---
+
+## Visualisation
+
+Feature importance was analysed using standardised regression coefficients.
+
+Example output:
+
+- Checkout initiation dominates revenue prediction
+- Promotion clicks show a negative coefficient
+- Behavioural funnel signals outperform acquisition features
+
+---
+
+## Tools & Technologies
+
+- SQL
+- Google BigQuery
+- Python
+- pandas
+- scikit-learn
+- matplotlib
+- seaborn
+
+---
+
+## Repository Structure
