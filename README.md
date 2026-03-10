@@ -109,6 +109,8 @@ The model explains approximately **25% of the variance in revenue**, indicating 
 
 ## Key Insights
 
+![Overall Funnel Chart](images/Feature_Importance_Revenue_Drivers_V2.png)
+
 ### 1. Checkout Behaviour is the Strongest Revenue Signal
 
 Checkout initiation shows the strongest association with revenue.
