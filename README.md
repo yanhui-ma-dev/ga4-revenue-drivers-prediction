@@ -134,25 +134,13 @@ Mobile devices show a slightly higher positive association with revenue compared
 
 Standardised Coefficient: device_category_mobile > device_category_desktop
 
-Implication: Even if conversion rates are traditionally higher on desktop, the behavioural patterns of mobile users in this segment drives higher total revenue.
+Implication: Even if conversion rates are traditionally higher on desktop, the behavioural patterns of mobile users in this segment drive higher total revenue.
 
 Strategic Action: Prioritising Mobile UX/UI and streamlining the mobile checkout flow is essential to capturing the bulk of the revenue potential.
 
 ---
 
-### 4. The Paid Traffic vs. Promotion Paradox
-
-A fascinating contrast emerged between Paid Search (CPC) and On-site Promotions.
-
-Contrast: While medium_cpc shows a positive association with revenue, promo_clicks remains negative.
-
-Interpretation: Paid traffic (CPC) effectively brings in high-intent shoppers who know what they want. However, once on-site, generic or intrusive promotional banners may be distracting these high-intent users or interrupting a smooth conversion path.
-
-Strategic Action: Re-evaluate the "Promotion UX." Ensure that ads for paid traffic lead to focused landing pages rather than generic homepages with heavy promotional pop-ups.
-
----
-
-### 5. Behaviour Outweighs Acquisition
+### 4. Behaviour Outweighs Acquisition
 
 Traffic source and device category have relatively small effects compared with behavioural funnel signals.
 
@@ -179,7 +167,7 @@ The chart below visualises the standardised regression coefficients, highlightin
 
 ![Overall Funnel Chart](images/Feature_Importance_Revenue_Drivers_V2.png)
 
-Example output:
+Key observations from the model:
 
 - Checkout initiation dominates revenue prediction
 - Promotion clicks show a negative coefficient
