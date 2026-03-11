@@ -45,16 +45,6 @@ Key steps included:
 - Aggregating event data to the user level
 - Creating behavioural features representing ecommerce funnel activity
 
-Example behavioural signals:
-
-- Product views
-- Add-to-cart events
-- Checkout initiation
-- Promotion clicks
-- Page views
-- Device category
-- Traffic source
-
 ---
 
 ### 2. Feature Engineering
@@ -65,7 +55,7 @@ Feature examples:
 
 | Feature | Description |
 |------|------|
-| page_views | Number of pages viewed |
+| event_value_in_usd | Number of total revenue |
 | product_views | Number of product detail views |
 | add_to_cart | Add-to-cart interactions |
 | begin_checkout | Checkout initiation events |
