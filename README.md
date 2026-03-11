@@ -18,11 +18,9 @@ The goal of this project is to identify behavioural signals that are most predic
 
 ## Dataset
 
-Dataset Source  
-GA4 Obfuscated Sample Ecommerce Dataset
+Dataset Source: GA4 Obfuscated Sample Ecommerce Dataset
 
-Platform  
-Google BigQuery
+Platform: Google BigQuery
 
 Description  
 This public dataset provided by Google simulates a real ecommerce website and contains event-level user interaction data typically collected via Google Analytics 4.
@@ -98,15 +96,11 @@ Tools used:
 
 ## Model
 
-Model Type  
-Linear Regression
+Model Type: Linear Regression
 
-Target Variable  
-User-level total revenue
+Target Variable: User-level total revenue
 
-Evaluation Metric
-
-R² = **0.253** focusing on interpretability over hyperparameter tuning.
+Evaluation Metric: R² = **0.253** focusing on interpretability over hyperparameter tuning.
 
 The model explains approximately **25% of the variance in revenue**, indicating that behavioural funnel interactions have measurable predictive power.
 
@@ -136,7 +130,7 @@ Promotion clicks show a **negative association with revenue**.
 
 Possible interpretation: Promotion interactions may attract **lower-intent users** or interrupt the purchase journey.
 
-Strategic Action: Promotional strategies may require **careful experimentation (e.g., A/B testing)** to ensure they improve conversion quality.
+Strategic Action: Promotional strategies may require **careful experimentation (A/B testing)** to ensure they improve conversion quality.
 
 ---
 
